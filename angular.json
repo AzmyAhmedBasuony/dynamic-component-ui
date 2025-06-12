@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CDS-UI": {
+    "Hijri-Calendar": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/cds-ui",
+            "outputPath": "dist/hijri-calendar",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "CDS-UI:build:production"
+              "buildTarget": "Hijri-Calendar:build:production"
             },
             "development": {
-              "buildTarget": "CDS-UI:build:development"
+              "buildTarget": "Hijri-Calendar:build:development"
             }
           },
           "defaultConfiguration": "development"

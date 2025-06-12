@@ -1,0 +1,34 @@
+<form class="row row-cols-sm-auto">
+    <span> {{ label | translate }} </span>
+
+  <div class="input-group">
+    <input
+      class="form-control"
+      [placeholder]="placeholder | translate"
+      id="gregorianDates"
+      name="gregorianDates"
+      [formControl]="control"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      ngbDatepicker
+      #d="ngbDatepicker"
+      (dateSelect)="onDateChange()" />
+
+    <div class="input-group-append">
+      <button
+        class="btn btn-outline-secondary"
+        (click)="d.toggle()"
+        type="button">
+        <i class="fa fa-calendar"></i>
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="text-danger"
+    *ngIf="control.invalid && (control.dirty || control.touched)">
+    <small *ngIf="control.errors?.['required']">
+      {{ 'This field is required' | translate }}
+    </small>
+  </div>
+</form>
